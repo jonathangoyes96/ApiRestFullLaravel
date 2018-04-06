@@ -8,13 +8,15 @@ class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     * $table->string('description', 1000); Maximo 1000 caracteres en la descripcion
      * @return void
      */
     public function up()
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('description', 1000);
             $table->timestamps();
         });
     }

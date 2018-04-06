@@ -28,7 +28,7 @@ class User extends Authenticatable
 
     /**
      * The attributes that should be hidden for arrays.
-     * Los atributos que definamos aqui no seran mostrados como respuesta JSON
+     * Los atributos que definamos aqui no seran mostrados como respuesta JSON para asegurar datos sensibles de la app
      * @var array
      */
     protected $hidden = [
