@@ -9,22 +9,13 @@ class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
+     * Retorna una respuesta de tipo JSON con todos los usuarios disponibles en la base de datos
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $users = User::all();
+        return response()->json(['data' => $users], 200);
     }
 
     /**
@@ -45,17 +36,6 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
     {
         //
     }
